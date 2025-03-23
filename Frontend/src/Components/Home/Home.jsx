@@ -1,11 +1,24 @@
-import React from 'react'
-
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LandingPage from "../LandingPage/LandingPage";
+import Login from "../Login/Login"
+import Signup from "../Signup/Signup"
+import Profile from "../Profile/Profile"
+import Navbar from "../Navbar/Navbar";
 const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <BrowserRouter>
+      <Navbar/>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
