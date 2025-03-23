@@ -24,6 +24,9 @@ const Navbar = () => {
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
         </li>
         <li>
+          <Link to="/blogs" onClick={() => setMenuOpen(false)}>Blogs</Link>
+        </li>
+        <li>
           <Link to="/login" onClick={() => setMenuOpen(false)}>Login</Link>
         </li>
         <li>
