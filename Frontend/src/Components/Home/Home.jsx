@@ -6,11 +6,13 @@ import Login from "../Login/Login"
 import Signup from "../Signup/Signup"
 import Profile from "../Profile/Profile"
 import Navbar from "../Navbar/Navbar";
+// import Cursor from "../Cursor/Cursor";
 const Home = () => {
   return (
     <div>
       <BrowserRouter>
       <Navbar/>
+       {/* <Cursor/> */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
