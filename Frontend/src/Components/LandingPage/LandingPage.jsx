@@ -1,9 +1,12 @@
-import React from 'react'
-
 const LandingPage = () => {
   return (
-    <div>
-      <h1>Landing Page!</h1>
+    <div className=" flex justify-center items-center h-[90vh]" >
+      <div className="font-['Poppins'] text-2xl" >
+        Welcome to
+      </div>
+      <div className="font-['UtBoldOnsedemoregular'] tracking-tighter leading-none ">
+      BlogKaro!
+      </div>
     </div>
   )
 }
