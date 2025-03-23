@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'UtBoldOnsedemoregular';
+  src: url('/fonts/utboldonsedemoregular-ovrpz.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
