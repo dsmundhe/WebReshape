@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { FaGoogle, FaLinkedin, FaGithub } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -30,10 +32,15 @@ const Signup = () => {
       return;
     }
 
+    localStorage.setItem("user", JSON.stringify({ name, email }));
+
+    setTimeout(() => {
+    navigate('/');
+      setName("");
+      setEmail("");
+      setPassword("");
+    }, 1000);
     toast.success("Signup successful");
-    setName("");
-    setEmail("");
-    setPassword("");
   };
 
   return (
@@ -86,7 +93,10 @@ const Signup = () => {
             </button>
           </div>
           <p className="text-xs mt-3">
-            Already have an account? <Link to="/login" className="text-blue-500 hover:underline">Login</Link>
+            Already have an account?{" "}
+            <Link to="/login" className="text-blue-500 hover:underline">
+              Login
+            </Link>
           </p>
         </form>
       </div>
